@@ -1,0 +1,17 @@
+﻿<Window x:Class="MijnPasta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding DeNaamVanMijnViewModel, Source={StaticResource Locator}}" >
+    
+    <Grid>
+        
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Ingredienten}" Margin="5" SelectedItem="{Binding SelectedSong}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naam" Binding="{Binding Naam}" />
+                <DataGridTextColumn Header="Aantal" Binding="{Binding Aantal}" Width="300" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
